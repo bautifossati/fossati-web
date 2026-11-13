@@ -124,8 +124,25 @@ function BloqueCaso({ titulo, children }: { titulo: string; children: React.Reac
 function TarjetaCaso({ caso, grande }: { caso: Caso; grande: boolean }) {
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl bg-negro p-7 text-hueso sm:p-9 ${grande ? "lg:p-12" : ""}`}
+      className={`flex h-full flex-col overflow-hidden rounded-2xl bg-negro p-7 text-hueso sm:p-9 ${grande ? "lg:p-12" : ""}`}
     >
+      {caso.imagen && (
+        // Foto real del proyecto, a sangre arriba de la tarjeta.
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={caso.imagen.src}
+          alt={caso.imagen.alt}
+          loading="lazy"
+          decoding="async"
+          width={1600}
+          height={grande ? 686 : 1000}
+          className={`-mx-7 -mt-7 mb-8 block w-[calc(100%+3.5rem)] max-w-none object-cover sm:-mx-9 sm:-mt-9 sm:w-[calc(100%+4.5rem)] ${
+            grande
+              ? "aspect-[16/10] lg:-mx-12 lg:-mt-12 lg:mb-10 lg:aspect-[21/9] lg:w-[calc(100%+6rem)]"
+              : "aspect-[16/10]"
+          }`}
+        />
+      )}
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-2xl leading-tight text-blanco sm:text-[1.75rem]">{caso.cliente}</h3>
         {caso.enCurso && (

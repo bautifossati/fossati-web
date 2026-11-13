@@ -55,6 +55,21 @@ Cada caso tiene estos campos:
 - **Para agregar un caso:** copiá un bloque `{ ... },` completo, pegalo en la lista y cambiale los textos. Se muestran en el mismo orden que en el archivo.
 - **Casos con `destacado`:** se muestran a todo el ancho con el número en grande, en amarillo.
 
+### Fotos de los casos
+
+Cada caso puede llevar una foto real del proyecto arriba de la tarjeta.
+
+1. Guardá la foto en `public/casos/`. Por ejemplo, `public/casos/ochentosa.webp`. Conviene que mida unos 1600 px de ancho y pese menos de 300 KB (formato `.webp` o `.jpg`).
+2. En el caso correspondiente de `site.ts`, agregá:
+
+   ```ts
+   imagen: { src: "/casos/ochentosa.webp", alt: "Corredores en la largada de la Maratón Ochentosa" },
+   ```
+
+   El texto `alt` describe la foto para quien no la ve, y también lo usa Google.
+
+Usá fotos propias o con permiso del cliente. Nada de fotos de stock. Si un caso no tiene foto, la tarjeta se ve igual, sin hueco.
+
 ### Proyecto en curso (Catamarca)
 
 Está oculto por defecto. Para mostrarlo, cambiá `proyectoEnCurso.publicable` a `true`.

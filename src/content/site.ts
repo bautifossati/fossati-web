@@ -103,6 +103,9 @@ export const rubros = {
  *  - resultado    el resultado en texto
  *  - destacado    (opcional) número grande + contexto. Ej.: { numero: "+5.000", texto: "inscriptos" }
  *  - enCurso      (opcional) true muestra la etiqueta "En curso"
+ *  - imagen       (opcional) foto real del proyecto. Guardala en public/casos/ y poné:
+ *                 imagen: { src: "/casos/ochentosa.webp", alt: "Corredores en la largada de la Maratón Ochentosa" }
+ *                 Usá fotos propias o con permiso del cliente. Nada de fotos de stock.
  *  - publicable   true lo muestra en el sitio, false lo oculta
  */
 export type Caso = {
@@ -114,6 +117,8 @@ export type Caso = {
   resultado?: string;
   destacado?: { numero: string; texto: string };
   enCurso?: boolean;
+  /** Foto del proyecto. `alt` describe la foto para quien no la ve. */
+  imagen?: { src: string; alt: string };
   publicable: boolean;
 };
 
