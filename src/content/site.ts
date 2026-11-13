@@ -29,7 +29,7 @@ export const contacto = {
 export const sitio = {
   nombre: "Fossati Relacionamiento y Gestión",
   /** Dominio final con https, sin barra al final. Ej.: https://fossati.com.ar */
-  dominio: "[DOMINIO]",
+  dominio: "https://fossati-web.vercel.app",
   titulo: "Fossati Relacionamiento y Gestión · Sabemos qué puerta tocar.",
   descripcion:
     "Conectamos empresas, personas e instituciones con quien puede resolver lo que necesitan, y acompañamos cada caso hasta que se concreta.",

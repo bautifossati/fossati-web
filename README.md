@@ -73,7 +73,7 @@ Los datos que faltan están entre corchetes en `src/content/site.ts`. Buscá `[`
 | `[LINKEDIN]` | `contacto.linkedin` | URL completa: `https://www.linkedin.com/company/...` |
 | `[LINK DROP]` | `unidades.items` → Drop Experiencias → `link` | URL completa con `https://` |
 | `[LINK ACUMEN]` | `unidades.items` → Ácumen → `link` | URL completa con `https://` |
-| `[DOMINIO]` | `sitio.dominio` | `https://fossati.com.ar`, sin barra al final. Se usa para Google y para la vista previa al compartir el link |
+| Dominio | `sitio.dominio` | Hoy: `https://fossati-web.vercel.app`. Cuando tengas dominio propio, reemplazalo (ej.: `https://fossati.com.ar`, sin barra al final). Se usa para Google y para la vista previa al compartir el link |
 | `[RESULTADO MOTIVATE]` | `casos.items` → MOTIVATE → `resultado` | Texto. Si todavía no hay resultado, borrá la línea `resultado` o poné `publicable: false` |
 
 ---
